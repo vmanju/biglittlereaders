@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@biglittlereaders</title>
+<link href="" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #2D4A3E;
+    color: #FDF6EC;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+
+  /* Profile */
+  .profile {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #C4633A;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-initials {
+    font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #F0C97A;
+  }
+
+  .profile-name {
+    font-family: -apple-system, BlinkMacSystemFont, Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FDF6EC;
+    margin-bottom: 6px;
+  }
+
+  .profile-handle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #D4A843;
+    margin-bottom: 10px;
+  }
+
+  .profile-bio {
+    font-size: 13px;
+    color: #A8C4B8;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* Rule */
+  .rule {
+    width: 40px;
+    height: 1px;
+    background: #D4A843;
+    margin: 24px auto;
+    opacity: 0.6;
+  }
+
+  /* Links */
+  .links { display: flex; flex-direction: column; gap: 12px; }
+
+  .link-card {
+    display: block;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(240,201,122,0.2);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+
+  .link-card:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(240,201,122,0.4);
+  }
+
+  .link-card.featured {
+    background: #C4633A;
+    border-color: #C4633A;
+  }
+
+  .link-card.featured:hover {
+    background: #D4733A;
+    border-color: #D4733A;
+  }
+
+  .link-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #F0C97A;
+    margin-bottom: 4px;
+  }
+
+  .link-card.featured .link-tag {
+    color: rgba(255,255,255,0.8);
+  }
+
+  .link-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FDF6EC;
+    margin-bottom: 2px;
+  }
+
+  .link-desc {
+    font-size: 12px;
+    color: rgba(253,246,236,0.65);
+    font-weight: 300;
+  }
+
+  .link-card.featured .link-desc {
+    color: rgba(255,255,255,0.75);
+  }
+
+  .link-arrow {
+    float: right;
+    font-size: 16px;
+    color: #F0C97A;
+    margin-top: -30px;
+    line-height: 1;
+  }
+
+  .link-card.featured .link-arrow {
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .footer-text {
+    font-size: 11px;
+    color: rgba(168,196,184,0.5);
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="profile">
+    <div style="width:120px;height:120px;margin:0 auto 14px;background:#FDF6EC;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+        <rect width="200" height="200" fill="none"/>
+        <!-- Left page -->
+        <path d="M24 108 L24 56 Q60 50 100 54 L100 108 Q60 112 24 108 Z" fill="#FDF6EC" stroke="#2D4A3E" stroke-width="1.8" stroke-linejoin="round"/>
+        <!-- Right page -->
+        <path d="M176 108 L176 56 Q140 50 100 54 L100 108 Q140 112 176 108 Z" fill="#F5ECD8" stroke="#2D4A3E" stroke-width="1.8" stroke-linejoin="round"/>
+        <!-- Spine -->
+        <path d="M100 54 L100 108" stroke="#C4633A" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Top arches -->
+        <path d="M24 56 Q62 48 100 54" fill="none" stroke="#2D4A3E" stroke-width="1.8"/>
+        <path d="M100 54 Q138 48 176 56" fill="none" stroke="#2D4A3E" stroke-width="1.8"/>
+        <!-- Left page lines -->
+        <line x1="36" y1="68" x2="90" y2="66" stroke="#2D4A3E" stroke-width="0.9" opacity="0.2"/>
+        <line x1="35" y1="76" x2="90" y2="74" stroke="#2D4A3E" stroke-width="0.9" opacity="0.2"/>
+        <line x1="35" y1="84" x2="90" y2="82" stroke="#2D4A3E" stroke-width="0.9" opacity="0.2"/>
+        <line x1="35" y1="92" x2="88" y2="90" stroke="#2D4A3E" stroke-width="0.9" opacity="0.15"/>
+        <!-- Right page lines -->
+        <line x1="110" y1="66" x2="164" y2="68" stroke="#2D4A3E" stroke-width="0.9" opacity="0.2"/>
+        <line x1="110" y1="74" x2="165" y2="76" stroke="#2D4A3E" stroke-width="0.9" opacity="0.2"/>
+        <line x1="110" y1="82" x2="165" y2="84" stroke="#2D4A3E" stroke-width="0.9" opacity="0.2"/>
+        <line x1="110" y1="90" x2="163" y2="92" stroke="#2D4A3E" stroke-width="0.9" opacity="0.15"/>
+        <!-- Bottom edge -->
+        <path d="M24 108 Q62 114 100 110 Q138 114 176 108" fill="none" stroke="#2D4A3E" stroke-width="1.5" opacity="0.5"/>
+        <!-- Wordmark -->
+        <text x="100" y="144" font-family="Georgia,serif" font-size="20" font-weight="600" fill="#2D4A3E" text-anchor="middle" letter-spacing="5">BIG LITTLE</text>
+        <line x1="58" y1="152" x2="142" y2="152" stroke="#D4A843" stroke-width="0.9"/>
+        <text x="100" y="168" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#C4633A" text-anchor="middle" letter-spacing="4">Readers</text>
+      </svg>
+    </div>
+    <div class="profile-name">Big Little Readers</div>
+    <div class="profile-handle">@biglittlereaders</div>
+    <div class="profile-bio">Books, read-aloud tips &amp; raising readers with intention · Ages 0–10</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="links">
+
+    <a class="link-card featured" href="https://vmanju.github.io/biglittlereaders">
+      <div class="link-tag">Free Download</div>
+      <div class="link-title">100 Books Before Age 10</div>
+      <div class="link-desc">The Big Little Readers List — get your free copy</div>
+      <div class="link-arrow">→</div>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/biglittlereaders">
+      <div class="link-tag">Follow Along</div>
+      <div class="link-title">Instagram</div>
+      <div class="link-desc">Book recommendations, read-aloud tips & more</div>
+      <div class="link-arrow">→</div>
+    </a>
+
+    <a class="link-card" href="https://biglittlereaders.beehiiv.com">
+      <div class="link-tag">Free Reading List</div>
+      <div class="link-title">Join the Reading Community</div>
+      <div class="link-desc">Get the 100 Books list + weekly reads in your inbox</div>
+      <div class="link-arrow">→</div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">© Big Little Readers · @biglittlereaders</p>
+  </div>
+
+</div>
+</body>
+</html>

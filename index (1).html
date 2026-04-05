@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Books Before Age 10 — Big Little Readers</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: #FDF6EC;
+    color: #1C1C1C;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+
+  .brand {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .brand-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2D4A3E;
+  }
+  .brand-rule {
+    width: 32px;
+    height: 2px;
+    background: #D4A843;
+    margin: 8px auto 0;
+  }
+
+  .free-badge {
+    display: inline-block;
+    background: #2D4A3E;
+    color: #F0C97A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 8vw, 52px);
+    font-weight: 700;
+    color: #2D4A3E;
+    line-height: 1.15;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero h1 span {
+    color: #C4633A;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: #6B6456;
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+
+  .inside {
+    background: white;
+    border-radius: 14px;
+    padding: 26px 24px 22px;
+    margin-bottom: 28px;
+    border: 1px solid #E2D5C3;
+  }
+
+  .inside-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2D4A3E;
+    margin-bottom: 16px;
+  }
+
+  .bands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .band {
+    background: #FDF6EC;
+    border-radius: 8px;
+    padding: 11px 13px;
+    border-left: 3px solid #C4633A;
+  }
+
+  .band-age {
+    font-size: 11px;
+    font-weight: 700;
+    color: #C4633A;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+  }
+
+  .band-label {
+    font-size: 13px;
+    color: #1C1C1C;
+  }
+
+  .inside-note {
+    font-size: 13px;
+    color: #6B6456;
+    line-height: 1.6;
+    border-top: 1px solid #E2D5C3;
+    padding-top: 14px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2D4A3E;
+    margin-bottom: 8px;
+  }
+
+  input[type="email"] {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #E2D5C3;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1C1C1C;
+    background: white;
+    outline: none;
+    font-family: inherit;
+    -webkit-appearance: none;
+    transition: border-color 0.2s;
+  }
+  input[type="email"]::placeholder { color: #B4A99A; }
+  input[type="email"]:focus { border-color: #2D4A3E; }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #2D4A3E;
+    color: #F0C97A;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .submit-btn:hover { background: #3D6357; }
+
+  .trust {
+    text-align: center;
+    font-size: 12px;
+    color: #A89D92;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  .quote {
+    text-align: center;
+    padding: 28px 0 0;
+    border-top: 1px solid #E2D5C3;
+    margin-top: 36px;
+  }
+
+  .quote-text {
+    font-size: 17px;
+    font-style: italic;
+    color: #2D4A3E;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .quote-attr {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C4633A;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brand">
+    <div class="brand-name">Big Little Readers</div>
+    <div class="brand-rule"></div>
+  </div>
+
+  <div class="hero">
+    <div class="free-badge">Free Download</div>
+    <h1>100 Books<br><span>Before Age 10</span></h1>
+    <p class="hero-sub">A beautifully designed reading list — curated by a mom who's actually read them all.</p>
+  </div>
+
+  <div class="inside">
+    <div class="inside-title">What's inside</div>
+    <div class="bands">
+      <div class="band">
+        <div class="band-age">Ages 0–3</div>
+        <div class="band-label">Board books & lap reads</div>
+      </div>
+      <div class="band">
+        <div class="band-age">Ages 3–5</div>
+        <div class="band-label">Picture books</div>
+      </div>
+      <div class="band">
+        <div class="band-age">Ages 5–7</div>
+        <div class="band-label">Early readers</div>
+      </div>
+      <div class="band">
+        <div class="band-age">Ages 7–10</div>
+        <div class="band-label">Chapter books</div>
+      </div>
+    </div>
+    <p class="inside-note">Every book has a one-line description so you know what you're getting into. These aren't books I googled — they're the ones with cracked spines on our shelves.</p>
+  </div>
+
+  <label class="form-label" for="email">Enter your email to get the free list</label>
+  <input type="email" id="email" placeholder="you@email.com" />
+  <a class="submit-btn" href="https://biglittlereaders.beehiiv.com">Send me the free list →</a>
+
+  <p class="trust">No spam. Just books, read-aloud tips, and raising readers with intention.<br>Unsubscribe anytime.</p>
+
+  <div class="quote">
+    <p class="quote-text">"Children are not algorithms. Use the age bands as a starting point, not a rulebook."</p>
+    <div class="quote-attr">— @biglittlereaders</div>
+  </div>
+
+</div>
+</body>
+</html>
